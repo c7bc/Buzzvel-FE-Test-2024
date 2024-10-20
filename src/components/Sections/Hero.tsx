@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-80 sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-10"
+        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-72 sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-10"
       >
         <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
           Get the Sun to <br />
