@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-64 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-0"
+        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-64 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-[-40px]"
       >
         <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
           Get the Sun to <br />
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Testemunho */}
-        <div className="mt-14 sm:mt-14 md:mt-14 lg:mt-14 xl:mt-20 2xl:mt-20 text-left">
+        <div className="mt-14 sm:mt-14 md:mt-14 lg:mt-14 xl:mt-20 2xl:mt-28 text-left">
           <p className="text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base font-light text-[#0F172A] mb-4">
             “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”
           </p>
