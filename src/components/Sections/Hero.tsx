@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-start justify-between mx-auto h-[740px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-screen 2xl:h-screen bg-white text-black px-6 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 max-w-screen-xl"
+      className="relative flex items-start justify-between mx-auto h-[720px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-screen 2xl:h-screen bg-white text-black px-6 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 max-w-screen-xl"
     >
       {/* Esquerda: Texto */}
       <motion.div
