@@ -45,15 +45,32 @@ const Features: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Image
-            src={desktop}
-            alt="Desktop showcasing features"
-            layout="responsive"
-            width={800}
-            height={600}
-            className="object-cover rounded-lg shadow-lg"
-            priority
-          />
+          {/* Exibir imagem diferente em dispositivos móveis e tablets */}
+          {/* Imagem para dispositivos móveis e tablets */}
+          <div className="block md:hidden">
+            <Image
+              src={desktopMobile}
+              alt="Mobile and Tablet view"
+              layout="responsive"
+              width={800}
+              height={600}
+              className="object-cover rounded-lg shadow-lg"
+              priority
+            />
+          </div>
+
+          {/* Imagem para dispositivos maiores (desktop) */}
+          <div className="hidden md:block">
+            <Image
+              src={desktop}
+              alt="Desktop showcasing features"
+              layout="responsive"
+              width={800}
+              height={600}
+              className="object-cover rounded-lg shadow-lg"
+              priority
+            />
+          </div>
         </motion.div>
       </div>
     </section>
