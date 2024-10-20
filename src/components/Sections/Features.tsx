@@ -20,7 +20,7 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-gray-100">
+    <section id="features" className="py-20 bg-wite">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-12">Recursos</h2>
         <div className="flex flex-wrap justify-center gap-8">
