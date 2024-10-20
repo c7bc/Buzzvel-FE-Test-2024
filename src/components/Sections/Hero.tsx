@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-64 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-[-500px]"
+        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-64 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-0"
       >
         <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
           Get the Sun to <br />
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-[-30px] lg:right-[-38px] 2xl:right-[-140px] w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[550px] 2xl:top-30 2xl:left-auto"
+        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-[-30px] lg:right-[-38px] 2xl:right-[-38px] w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[600px] 2xl:top-30 2xl:left-auto"
       >
         <Image
           src={heroImage}
