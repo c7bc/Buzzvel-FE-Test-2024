@@ -80,25 +80,25 @@ const Features: React.FC = () => {
 const BackgroundEllipses: React.FC = () => (
   <>
     {/* Orange Ellipse */}
-    <div className="absolute top-64 sm:top-72 md:top-64 lg:top-72 xl:top-40 2xl:top-40 left-[-20%] sm:left-[-5%] md:left-[-15%] lg:left-24 xl:left-20 2xl:left-36 transform -translate-x-1/3 -translate-y-1/4 z-0">
+    <div className="absolute top-64 sm:top-72 md:top-64 lg:top-72 xl:top-40 2xl:top-40 left-[-20%] sm:left-[-5%] md:left-[-15%] lg:left-24 xl:left-20 2xl:left-32 transform -translate-x-1/3 -translate-y-1/4 z-0">
       <Image
         src={orange}
         alt="Decorative orange ellipse"
         width={370}
         height={500}
-        className="w-56 h-auto sm:w-80 md:w-96 lg:w-[370px] xl:w-[400px] 2xl:w-[450px]"
+        className="w-56 h-auto sm:w-80 md:w-96 lg:w-[370px] xl:w-[400px] 2xl:w-[400px]"
         priority
       />
     </div>
 
     {/* Purple Ellipse */}
-    <div className="absolute top-72 sm:top-80 md:top-80 lg:top-80 xl:top-96 2xl:top-96 right-[-40%] sm:right-[-5%] md:right-[-15%] lg:right-32 xl:right-30 2xl:right-40 transform translate-x-1/3 -translate-y-1/4 z-0">
+    <div className="absolute top-72 sm:top-80 md:top-80 lg:top-80 xl:top-96 2xl:top-96 right-[-40%] sm:right-[-5%] md:right-[-15%] lg:right-32 xl:right-30 2xl:right-36 transform translate-x-1/3 -translate-y-1/4 z-0">
       <Image
         src={purple}
         alt="Decorative purple ellipse"
         width={400}
         height={400}
-        className="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[400px] xl:w-[450px] 2xl:w-[500px]"
+        className="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[400px] xl:w-[450px] 2xl:w-[450px]"
         priority
       />
     </div>
