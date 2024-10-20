@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-64 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-0"
+        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-64 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-[-300px]"
       >
         <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
           Get the Sun to <br />
@@ -25,13 +25,13 @@ const Hero: React.FC = () => {
           Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.
         </p>
 
-        {/* Centraliza o botão no tablet, celular e 2xl */}
-        <div className="flex justify-center md:justify-start 2xl:justify-center">
+        {/* Alinhar o botão à esquerda no 2xl */}
+        <div className="flex justify-center md:justify-start 2xl:justify-start">
           <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
         </div>
 
         {/* Testemunho */}
-        <div className="mt-14 sm:mt-14 md:mt-14 lg:mt-14 xl:mt-20 2xl:mt-20 text-left">
+        <div className="mt-14 sm:mt-14 md:mt-14 lg:mt-14 xl:mt-20 2xl:mt-60 text-left">
           <p className="text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base font-light text-[#0F172A] mb-4">
             “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”
           </p>
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-[-30px] lg:right-[-38px] 2xl:right-0 w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[600px] 2xl:top-0 2xl:left-auto"
+        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-[-30px] lg:right-[-38px] 2xl:right-[-140px] w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[800px] 2xl:top-30 2xl:left-auto"
       >
         <Image
           src={heroImage}
