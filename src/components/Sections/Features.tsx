@@ -1,44 +1,91 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
+import desktop from "../../../public/images/desktop.png";
+import desktopMobile from "../../../public/images/desktop-mobile.png";
+import purple from "../../../public/images/elipse-purple.png";
+import orange from "../../../public/images/elipse-orange.png";
 
 const Features: React.FC = () => {
-  const features = [
-    {
-      title: "Performance",
-      description: "Aplicações rápidas e responsivas.",
-      icon: "🔥",
-    },
-    {
-      title: "SEO Otimizado",
-      description: "Melhore sua visibilidade nos motores de busca.",
-      icon: "🚀",
-    },
-    {
-      title: "Design Moderno",
-      description: "Interface agradável e intuitiva.",
-      icon: "🎨",
-    },
-  ];
-
   return (
-    <section id="features" className="py-20 bg-wite">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">Recursos</h2>
-        <div className="flex flex-wrap justify-center gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              className="w-1/3 min-w-[200px] p-6 bg-white rounded-lg shadow-lg"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-2xl font-semibold mb-2">{feature.title}</h3>
-              <p>{feature.description}</p>
-            </motion.div>
-          ))}
-        </div>
+    <section id="features" className="relative bg-white overflow-hidden py-12">
+      {/* Background Ellipses */}
+      <BackgroundEllipses />
+
+      <div className="container mx-auto flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 text-center z-10 relative">
+        <motion.h2
+          className="text-sm font-bold text-[#d97706] mb-2"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          No more waste
+        </motion.h2>
+
+        <motion.h1
+          className="text-4xl sm:text-5xl font-extrabold leading-tight text-[#0F172A]"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Pick the Sun
+        </motion.h1>
+
+        <motion.p
+          className="text-sm font-normal leading-relaxed text-[#0F172A] max-w-2xl mt-4 px-2 sm:px-4"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Et pulvinar nec interdum integer id urna molestie porta nullam. A, donec ornare sed turpis pulvinar purus maecenas quam a. Erat porttitor pharetra sed in mauris elementum sollicitudin.
+        </motion.p>
+
+        <motion.div
+          className="relative w-full max-w-4xl h-auto mt-10"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <Image
+            src={desktop}
+            alt="Desktop showcasing features"
+            layout="responsive"
+            width={800}
+            height={600}
+            className="object-cover rounded-lg shadow-lg"
+            priority
+          />
+        </motion.div>
       </div>
     </section>
   );
 };
+
+const BackgroundEllipses: React.FC = () => (
+  <>
+    {/* Orange Ellipse */}
+    <div className="absolute top-64 sm:top-72 md:top-64 lg:top-72 xl:top-40 2xl:top-40 left-[-20%] sm:left-[-5%] md:left-[-15%] lg:left-24 xl:left-20 2xl:left-40 transform -translate-x-1/3 -translate-y-1/4 z-0">
+      <Image
+        src={orange}
+        alt="Decorative orange ellipse"
+        width={370}
+        height={500}
+        className="w-56 h-auto sm:w-80 md:w-96 lg:w-[370px] xl:w-[400px] 2xl:w-[450px]"
+        priority
+      />
+    </div>
+
+    {/* Purple Ellipse */}
+    <div className="absolute top-72 sm:top-80 md:top-80 lg:top-80 xl:top-96 2xl:top-96 right-[-40%] sm:right-[-5%] md:right-[-15%] lg:right-32 xl:right-30 2xl:right-40 transform translate-x-1/3 -translate-y-1/4 z-0">
+      <Image
+        src={purple}
+        alt="Decorative purple ellipse"
+        width={400}
+        height={400}
+        className="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[400px] xl:w-[450px] 2xl:w-[500px]"
+        priority
+      />
+    </div>
+  </>
+);
 
 export default Features;
