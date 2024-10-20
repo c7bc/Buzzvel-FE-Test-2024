@@ -5,7 +5,7 @@ import Features from "@/components/Sections/Features";
 import TestimonialCarousel from "@/components/Sections/TestmonialCarrousel";
 import SecondarySection from "@/components/Sections/SecondarySection";
 import CallToAction from "@/components/Sections/CallToAction";
-import Services from "@/components/Sections/Services"
+// import Services from "@/components/Sections/Services"
 
 const Home: React.FC = () => {
   return (
