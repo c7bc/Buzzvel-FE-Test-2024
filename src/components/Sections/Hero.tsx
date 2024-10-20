@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-start justify-between mx-auto h-screen bg-white text-black px-6 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 max-w-screen-xl"
+      className="relative flex items-start justify-between mx-auto h-[700px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-screen 2xl:h-screen bg-white text-black px-6 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 max-w-screen-xl"
     >
       {/* Esquerda: Texto */}
       <motion.div
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Testemunho */}
-        <div className="mt-14 sm:mt-20 md:mt-20 lg:mt-20 xl:mt-20 2xl:mt-20 text-left"> {/* Alinhando à esquerda */}
+        <div className="mt-14 sm:mt-14 md:mt-14 lg:mt-14 xl:mt-20 2xl:mt-20 text-left"> {/* Alinhando à esquerda */}
           <p className="text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base font-light text-[#0F172A] mb-4">
             “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”
           </p>
