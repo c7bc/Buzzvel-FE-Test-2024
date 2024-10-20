@@ -8,27 +8,27 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-start justify-between mx-auto h-screen bg-white text-black px-6 lg:px-20 max-w-screen-xl"
+      className="relative flex items-start justify-between mx-auto h-screen bg-white text-black px-6 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 max-w-screen-xl"
     >
       {/* Esquerda: Texto */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full md:w-1/2 text-center md:text-left mt-10"
+        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-10"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
+        <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
           Get the Sun to <br />
           Power Your Home
         </h1>
-        <p className="text-base md:text-xl mb-6 font-light text-[#0F172A]">
+        <p className="text-base sm:text-base md:text-xl lg:text-xl xl:text-xl 2xl:text-xl mb-6 font-light text-[#0F172A]">
           Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.
         </p>
         <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
 
         {/* Testemunho */}
         <div className="mt-20">
-          <p className="text-sm font-light text-[#0F172A] mb-4">
+          <p className="text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base font-light text-[#0F172A] mb-4">
             “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”
           </p>
           <div className="flex items-center space-x-4">
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="absolute bottom-24 right-0 lg:right-[-38px] w-[400px] md:w-[550px]" // Mantém a imagem responsiva
+        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-0 lg:right-[-38px] w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[600px]"
       >
         <Image
           src={heroImage}
