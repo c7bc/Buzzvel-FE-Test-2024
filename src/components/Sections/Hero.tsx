@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-[-10px] lg:right-[-38px] w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[600px]"
+        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-[-30px] lg:right-[-38px] w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[600px]"
       >
         <Image
           src={heroImage}
