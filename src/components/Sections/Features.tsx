@@ -80,7 +80,7 @@ const Features: React.FC = () => {
 const BackgroundEllipses: React.FC = () => (
   <>
     {/* Orange Ellipse */}
-    <div className="absolute top-64 sm:top-72 md:top-64 lg:top-72 xl:top-40 2xl:top-40 left-[-20%] sm:left-[-5%] md:left-[-15%] lg:left-24 xl:left-20 2xl:left-36 transform -translate-x-1/3 -translate-y-1/4 z-0">
+    <div className="absolute top-64 sm:top-72 md:top-64 lg:top-72 xl:top-40 2xl:top-40 left-[-20%] sm:left-[-5%] md:left-[-15%] lg:left-24 xl:left-20 2xl:left-30 transform -translate-x-1/3 -translate-y-1/4 z-0">
       <Image
         src={orange}
         alt="Decorative orange ellipse"
