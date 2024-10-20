@@ -8,14 +8,14 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-start justify-between mx-auto h-[700px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-screen 2xl:h-screen bg-white text-black px-6 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 max-w-screen-xl"
+      className="relative flex items-start justify-between mx-auto h-[700px] sm:h-[650px] md:h-[600px] lg:h-[550px] xl:h-screen 2xl:h-screen bg-white text-black px-6 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 max-w-screen-xl 2xl:max-w-screen-2xl 2xl:items-center"
     >
       {/* Esquerda: Texto */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-10"
+        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-64 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-0"
       >
         <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
           Get the Sun to <br />
@@ -25,13 +25,13 @@ const Hero: React.FC = () => {
           Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.
         </p>
 
-        {/* Centraliza o botão no tablet e no celular */}
-        <div className="flex justify-center md:justify-start">
+        {/* Centraliza o botão no tablet, celular e 2xl */}
+        <div className="flex justify-center md:justify-start 2xl:justify-center">
           <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
         </div>
 
         {/* Testemunho */}
-        <div className="mt-14 sm:mt-14 md:mt-14 lg:mt-14 xl:mt-20 2xl:mt-20 text-left"> {/* Alinhando à esquerda */}
+        <div className="mt-14 sm:mt-14 md:mt-14 lg:mt-14 xl:mt-20 2xl:mt-20 text-left">
           <p className="text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base font-light text-[#0F172A] mb-4">
             “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”
           </p>
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-[-30px] lg:right-[-38px] w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[600px]"
+        className="absolute top-[-70px] sm:bottom-24 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 right-[-30px] lg:right-[-38px] 2xl:right-0 w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] 2xl:w-[600px] 2xl:top-0 2xl:left-auto"
       >
         <Image
           src={heroImage}
