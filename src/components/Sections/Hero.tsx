@@ -1,25 +1,69 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
+import heroImage from "../../../public/images/right.png";
+import testmonial1 from "../../../public/images/testmonial-1.jpeg";
+import ButtonPurple from "../ui/ButtonPurple";
 
 const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+      className="relative flex items-start justify-between mx-auto h-screen bg-white text-black px-6 lg:px-20 max-w-screen-xl"
     >
+      {/* Esquerda: Texto */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center"
+        className="w-full md:w-1/2 text-center md:text-left mt-10"
       >
-        <h1 className="text-5xl font-bold mb-4">Bem-vindo à Minha SPA</h1>
-        <p className="text-xl mb-8">Uma experiência incrível com Next.js e React</p>
-        <a
-          href="#features"
-          className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-md shadow-md hover:bg-gray-100 transition"
-        >
-          Saiba Mais
-        </a>
+        <h1 className="text-4xl md:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
+          Get the Sun to <br />
+          Power Your Home
+        </h1>
+        <p className="text-base md:text-xl mb-6 font-light text-[#0F172A]">
+          Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.
+        </p>
+        <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
+
+        {/* Testemunho */}
+        <div className="mt-20">
+          <p className="text-sm font-light text-[#0F172A] mb-4">
+            “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”
+          </p>
+          <div className="flex items-center space-x-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden">
+              <Image
+                src={testmonial1}
+                alt="Image Testimonial"
+                width={64}
+                height={64}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div>
+              <h1 className="text-sm font-light text-[#0F172A]">Rwanda Melflor</h1>
+              <p className="text-sm font-light text-[#475569]">zerowaste.com</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Imagem: Posicionada à direita */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className="absolute bottom-24 right-0 lg:right-[-38px] w-[400px] md:w-[550px]" // Mantém a imagem responsiva
+      >
+        <Image
+          src={heroImage}
+          alt="Imagem ilustrativa"
+          layout="responsive"
+          width={550}
+          height={550}
+          quality={100}
+        />
       </motion.div>
     </section>
   );

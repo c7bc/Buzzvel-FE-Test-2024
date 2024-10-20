@@ -1,10 +1,11 @@
+// Header.tsx
 import Link from "next/link";
 import { MdOutlineHeadphones } from "react-icons/md";
-import { HiArrowRight } from "react-icons/hi";
+import ButtonPurple from "../ui/ButtonPurple"; // Importando o botão reutilizável
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-white shadow-md w-full absolute top-0 left-0">
+    <header className="bg-white w-full absolute top-0 left-0">
       <div className="container mx-auto flex items-center justify-between max-h-28 py-6 px-20">
         {/* Logo and Navigation */}
         <div className="flex items-center">
@@ -32,7 +33,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Contact and Quote Button */}
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-8 z-10">
           {/* Phone and Icon */}
           <div className="flex items-center text-[#0369A1]">
             <MdOutlineHeadphones className="text-2xl" />
@@ -41,14 +42,8 @@ const Header: React.FC = () => {
             </h2>
           </div>
 
-          {/* Request a Quote Button */}
-          <button
-            className="flex items-center border-2 border-[#581C87] text-[#581C87] px-7 py-2 rounded-full transition-all duration-300 hover:bg-[#581C87] hover:text-yellow-400"
-            aria-label="Request a Quote"
-          >
-            <span className="font-semibold">Request a Quote</span>
-            <HiArrowRight className="ml-2 text-sm" />
-          </button>
+          {/* Reusing the ButtonPurple component */}
+          <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
         </div>
       </div>
     </header>
