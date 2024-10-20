@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-60 sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-10"
+        className="w-full sm:w-full md:w-1/2 text-center sm:text-center md:text-left mt-64 sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-10"
       >
         <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold text-[#0F172A] mb-4 leading-tight">
           Get the Sun to <br />
@@ -24,10 +24,14 @@ const Hero: React.FC = () => {
         <p className="text-base sm:text-base md:text-xl lg:text-xl xl:text-xl 2xl:text-xl mb-6 font-light text-[#0F172A]">
           Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.
         </p>
-        <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
+
+        {/* Centraliza o botão no tablet e no celular */}
+        <div className="flex justify-center md:justify-start">
+          <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
+        </div>
 
         {/* Testemunho */}
-        <div className="mt-20">
+        <div className="mt-14 sm:mt-20 md:mt-20 lg:mt-20 xl:mt-20 2xl:mt-20 text-left"> {/* Alinhando à esquerda */}
           <p className="text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base font-light text-[#0F172A] mb-4">
             “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”
           </p>
