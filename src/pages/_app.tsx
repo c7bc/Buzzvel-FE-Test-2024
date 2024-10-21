@@ -5,12 +5,12 @@ import Layout from '@/components/layout/Layout';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout seo={{
-      title: "Sollar",
-      description: "Descrição da sua SPA para SEO",
-      keywords: "palavras-chave, para, SEO, Next.js, React",
-      ogTitle: "Título da Página",
-      ogDescription: "Descrição da página para Open Graph",
-      ogImage: "/og-image.jpg", // Certifique-se de ter esta imagem na pasta public
+      title: "Soller",
+      description: "Soller - Liderando o caminho na instalação de painéis solares com soluções inovadoras.",
+      keywords: "Painel Solar, Energia Limpa, SEO, Next.js, React",
+      ogTitle: "Soller",
+      ogDescription: "Soller - Liderando o caminho na instalação de painéis solares com soluções inovadoras.",
+      ogImage: "/og-image.jpg", // Eu deixei um caminho fictício
       twitterCard: "summary_large_image",
     }}>
       <Component {...pageProps} />

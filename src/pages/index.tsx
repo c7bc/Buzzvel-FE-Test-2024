@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   return (
     <>
     <SEO
-        title="Sollar"
+        title="Soller"
         description="Soller - Liderando o caminho na instalação de painéis solares com soluções inovadoras."
         keywords="painéis solares, instalação solar, energia renovável, soluções sustentáveis"
         ogImage="https://www.soller.com/images/seo-image.png" // Eu deixei um caminho fictício
