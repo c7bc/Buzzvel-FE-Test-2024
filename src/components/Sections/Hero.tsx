@@ -43,6 +43,7 @@ const Hero: React.FC = () => {
                 width={64}
                 height={64}
                 className="object-cover w-full h-full"
+                priority
               />
             </div>
             <div>
