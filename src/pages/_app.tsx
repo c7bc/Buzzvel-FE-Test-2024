@@ -5,7 +5,7 @@ import Layout from '@/components/layout/Layout';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout seo={{
-      title: "Minha SPA",
+      title: "sollar",
       description: "Descrição da sua SPA para SEO",
       keywords: "palavras-chave, para, SEO, Next.js, React",
       ogTitle: "Título da Página",

@@ -67,6 +67,7 @@ const Hero: React.FC = () => {
           width={550}
           height={550}
           quality={100}
+          loading="eager"
         />
       </motion.div>
     </section>

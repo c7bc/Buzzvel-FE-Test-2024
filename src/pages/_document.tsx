@@ -14,7 +14,12 @@ export default function Document() {
           rel="stylesheet"
         />
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icos/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icos/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icos/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icos/favicon-16x16.png" />
+        <link rel="manifest" href="/icos/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
         {/* Other meta tags can be added here */}
       </Head>
       <body>
