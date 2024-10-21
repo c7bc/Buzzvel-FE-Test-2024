@@ -108,7 +108,6 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
         height={500}
         className="object-contain"
         priority
-        loading="lazy"
       />
     </div>
 
@@ -128,7 +127,6 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
         quality={100}
         className="object-contain"
         priority
-        loading="lazy"
       />
     </div>
   </>

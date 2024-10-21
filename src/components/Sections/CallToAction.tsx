@@ -43,7 +43,6 @@ const CallToAction: React.FC = () => {
             alt="MacBook"
             className="w-full max-w-lg lg:max-w-2xl"
             priority
-            loading="lazy"
           />
         </div>
       </div>
