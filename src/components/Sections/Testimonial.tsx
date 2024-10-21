@@ -22,6 +22,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ quote, author, position, imag
           width={64}
           height={64}
           className="object-cover" // Aplicar bordas arredondadas
+          loading="lazy"
         />
       </div>
 

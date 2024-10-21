@@ -43,6 +43,7 @@ const CallToAction: React.FC = () => {
             alt="MacBook"
             className="w-full max-w-lg lg:max-w-2xl"
             priority
+            loading="lazy"
           />
         </div>
       </div>
@@ -57,6 +58,7 @@ const CallToAction: React.FC = () => {
             width={600}
             height={600}
             className="object-contain"
+            loading="lazy"
           />
         </div>
         {/* For small screens: Bottom-left corner */}
@@ -67,6 +69,7 @@ const CallToAction: React.FC = () => {
             width={200}
             height={200}
             className="object-contain"
+            loading="lazy"
           />
         </div>
       </div>
