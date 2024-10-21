@@ -7,5 +7,5 @@ const nextConfig = {
 };
 
 export default withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',  // Ativa o Bundle Analyzer quando ANALYZE=true
+  enabled: process.env.ANALYZE === 'true', 
 })(nextConfig);
