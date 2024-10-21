@@ -5,7 +5,7 @@ import placeholderMobile from "../../../public/images/mobile-app-placeholder.png
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="relative bg-gray-50 overflow-hidden py-12 mt-6">
+    <section id="services" className="relative overflow-hidden py-12 mt-6 h-auto sm:h-96 lg:h-[600px] xl:h-[700px]">
       <div className="hidden sm:block md:hidden lg:hidden xl:block 2xl:block">
         <BackgroundImages />
       </div>
@@ -106,7 +106,6 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
         width={500}
         height={500}
         className="object-contain"
-        priority
       />
     </div>
 
@@ -124,7 +123,6 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
         height={400}
         quality={100}
         className="object-contain"
-        priority
       />
     </div>
   </>

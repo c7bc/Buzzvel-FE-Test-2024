@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       keywords: "palavras-chave, para, SEO, Next.js, React",
       ogTitle: "Título da Página",
       ogDescription: "Descrição da página para Open Graph",
-      ogImage: "/og-image.jpg", // Certifique-se de ter esta imagem na pasta public
+      ogImage: "/og-image.jpg", // Eu deixei um caminho fictício
       twitterCard: "summary_large_image",
     }}>
       <Component {...pageProps} />

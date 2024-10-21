@@ -59,7 +59,6 @@ const CallToAction: React.FC = () => {
             src={macbook}
             alt="MacBook showcasing Soller services"
             className="w-full max-w-lg lg:max-w-2xl"
-            priority
           />
         </motion.div>
       </div>

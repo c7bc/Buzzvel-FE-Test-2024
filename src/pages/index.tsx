@@ -15,7 +15,7 @@ const Home: React.FC = () => {
         title="Sollar"
         description="Soller - Liderando o caminho na instalação de painéis solares com soluções inovadoras."
         keywords="painéis solares, instalação solar, energia renovável, soluções sustentáveis"
-        ogImage="https://www.soller.com/images/seo-image.png" // Eu deixo um fictício
+        ogImage="https://www.soller.com/images/seo-image.png" // Eu deixei um caminho fictício
       />
       <Hero />
       <Features />

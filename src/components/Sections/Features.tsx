@@ -60,7 +60,6 @@ const Features: React.FC = () => {
               width={800}
               height={600}
               className="object-cover rounded-lg shadow-lg"
-              priority
             />
           </div>
 
@@ -73,7 +72,6 @@ const Features: React.FC = () => {
               width={800}
               height={600}
               className="object-cover rounded-lg shadow-lg"
-              priority
             />
           </div>
         </motion.div>
@@ -92,7 +90,6 @@ const BackgroundEllipses: React.FC = () => (
         width={370}
         height={500}
         className="w-56 h-auto sm:w-80 md:w-96 lg:w-[370px] xl:w-[400px] 2xl:w-[400px]"
-        priority
       />
     </div>
 
@@ -104,7 +101,6 @@ const BackgroundEllipses: React.FC = () => (
         width={400}
         height={400}
         className="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[400px] xl:w-[450px] 2xl:w-[450px]"
-        priority
       />
     </div>
   </>
