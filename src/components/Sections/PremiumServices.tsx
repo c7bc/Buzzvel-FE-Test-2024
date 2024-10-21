@@ -1,5 +1,3 @@
-// src/components/sections/PremiumServices.tsx
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import rectangle from "../../../public/images/rectangle-2.png";
@@ -39,16 +37,16 @@ const PremiumServices: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-sm font-bold text-[#d97706] mb-2">System Features</h2>
-          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-[#0F172A]">
+          <h1 className="text-sm font-bold text-[#d97706] mb-2">System Features</h1>
+          <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight text-[#0F172A]">
             Powerful Features
-          </h1>
+          </h2>
           <p className="text-sm font-normal leading-relaxed text-[#0F172A] max-w-6xl mt-4">
             Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit ornare maecenas lectus sed.
           </p>
 
           {/* Blocos de Destaques */}
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-8">
+          <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-8">
             <ServiceBlock
               title="Erat sit"
               description="Id quis lectus pharetra, ultricies integer montes, amet, gravida consectetur. Nunc convallis fringilla nisl magna sagittis."
@@ -70,7 +68,7 @@ const PremiumServices: React.FC = () => {
       </div>
 
       {/* Background Images para Mobile */}
-      <div className="block sm:hidden">
+      <div className="block sm:hidden ">
         <BackgroundImages isMobile />
       </div>
     </section>

@@ -1,5 +1,3 @@
-// src/components/sections/Services.tsx
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import rectangle from "../../../public/images/rectangle.png";
@@ -8,7 +6,6 @@ import placeholderMobile from "../../../public/images/mobile-app-placeholder.png
 const Services: React.FC = () => {
   return (
     <section id="services" className="relative bg-gray-50 overflow-hidden py-12 mt-6">
-      {/* Background Images para Desktop */}
       <div className="hidden sm:block md:hidden lg:hidden xl:block 2xl:block">
         <BackgroundImages />
       </div>
@@ -31,7 +28,6 @@ const Services: React.FC = () => {
           h-auto
         "
       >
-        {/* Conteúdo dos Serviços */}
         <motion.div
           className="max-w-3xl w-full"
           initial={{ opacity: 0, x: 50 }}
@@ -39,16 +35,15 @@ const Services: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-sm font-bold text-[#d97706] mb-2">Services</h2>
-          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-[#0F172A]">
+          <h1 className="text-sm font-bold text-[#d97706] mb-2">Services</h1>
+          <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight text-[#0F172A]">
             Personalized Services
-          </h1>
+          </h2>
           <p className="text-sm font-normal leading-relaxed text-[#0F172A] max-w-6xl mt-4">
             Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit ornare maecenas lectus sed.
           </p>
 
-          {/* Blocos de Serviços */}
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-8">
+          <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-8">
             <ServiceBlock
               title="Et mauris"
               description="Posuere quis sed mauris non curabitur pretium elementum eget. Feugiat sed maecenas eu accumsan tristique."
@@ -69,8 +64,7 @@ const Services: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Background Images para Mobile */}
-      <div className="block sm:hidden">
+      <div className="block sm:hidden mt-10">
         <BackgroundImages isMobile />
       </div>
     </section>
@@ -101,7 +95,6 @@ interface BackgroundImagesProps {
 
 const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
   <>
-    {/* Imagem do Retângulo */}
     <div
       className={`${
         isMobile ? "w-80" : "absolute top-0 left-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-96"
@@ -117,7 +110,6 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
       />
     </div>
 
-    {/* Imagem de Placeholder Mobile */}
     <div
       className={`${
         isMobile

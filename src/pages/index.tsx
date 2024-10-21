@@ -12,10 +12,10 @@ const Home: React.FC = () => {
   return (
     <>
     <SEO
-        title="Home"
+        title="Sollar"
         description="Soller - Liderando o caminho na instalação de painéis solares com soluções inovadoras."
         keywords="painéis solares, instalação solar, energia renovável, soluções sustentáveis"
-        ogImage="https://www.soller.com/images/seo-image.png"
+        ogImage="https://www.soller.com/images/seo-image.png" // Eu deixo um fictício
       />
       <Hero />
       <Features />
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
 // Função para habilitar SSG
 export const getStaticProps = async () => {
   return {
-    props: {}, // Nenhum dado necessário, apenas para ativar SSG
+    props: {},
   };
 };
 
