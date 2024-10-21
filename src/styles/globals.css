@@ -11,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden; /* Desativa a rolagem horizontal */
   overflow-y: hidden; /* Esconde a barra de rolagem */
+  background-color: white;
 }
 
 /* Para adicionar uma barra de rolagem personalizada, caso precise */

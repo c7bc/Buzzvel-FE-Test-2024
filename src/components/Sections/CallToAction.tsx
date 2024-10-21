@@ -11,7 +11,7 @@ const CallToAction: React.FC = () => {
   return (
     <section
       id="call-to-action"
-      className="py-12 bg-[#7E22CE] min-h-screen flex flex-col justify-center relative overflow-hidden"
+      className="py-12 bg-[#581C87] lg:bg-[#7E22CE] min-h-screen flex flex-col justify-center relative overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
