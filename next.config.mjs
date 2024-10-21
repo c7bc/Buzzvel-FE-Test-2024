@@ -2,10 +2,11 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig = {
-  compress: true,  // Mantém a compressão habilitada
-  reactStrictMode: true,  // Modo estrito do React
+  compress: true,
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
 export default withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true', 
+  enabled: process.env.ANALYZE === 'true',
 })(nextConfig);
