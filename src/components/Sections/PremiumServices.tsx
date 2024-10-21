@@ -1,13 +1,13 @@
-// src/components/Sections/Services.tsx
+// src/components/Sections/Destaques.tsx
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import rectangle from "../../../public/images/rectangle.png";
-import placeholderMobile from "../../../public/images/mobile-app-placeholder.png";
+import rectangle from "../../../public/images/rectangle-2.png";
+import placeholderMobile from "../../../public/images/mobile-app-placeholder-2.png";
 
-const Services: React.FC = () => {
+const PremiumServices: React.FC = () => {
   return (
-    <section id="services" className="relative bg-gray-50 overflow-hidden py-12 mt-6">
+    <section id="destaques" className="relative bg-gray-50 overflow-hidden py-12 mt-6">
       {/* Background Images para Desktop, oculto em md e lg */}
       <div className="hidden sm:block md:hidden lg:hidden xl:block 2xl:block">
         <BackgroundImages />
@@ -17,11 +17,11 @@ const Services: React.FC = () => {
         className="
           container mx-auto 
           flex 
-          justify-end 
+          justify-start 
           md:justify-center 
           lg:justify-center 
-          xl:justify-end 
-          2xl:justify-end 
+          xl:justify-start 
+          2xl:justify-start 
           items-start 
           px-4 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20 
           sm:text-left 
@@ -32,38 +32,38 @@ const Services: React.FC = () => {
           mt-0
         "
       >
-        {/* Conteúdo dos Serviços */}
+        {/* Conteúdo dos Destaques */}
         <motion.div
           className="max-w-3xl"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h2 className="text-sm font-bold text-[#d97706] mb-2">Services</h2>
+          <h2 className="text-sm font-bold text-[#d97706] mb-2">System features</h2>
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-[#0F172A]">
-            Personalized Services
+          Powerful features
           </h1>
           <p className="text-sm font-normal leading-relaxed text-[#0F172A] max-w-6xl mt-4">
-            Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit ornare maecenas lectus sed.
+          Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit ornare maecenas lectus sed.
           </p>
 
-          {/* Blocos de Serviços */}
+          {/* Blocos de Destaques */}
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-8 md:gap-y-32">
             <ServiceBlock
-              title="Et mauris"
-              description="Posuere quis sed mauris non curabitur pretium elementum eget. Feugiat sed maecenas eu accumsan tristique."
+              title="Erat sit"
+              description="Id quis lectus pharetra, ultricies integer montes, amet, gravida consectetur. Nunc convallis fringilla nisl magna sagittis."
             />
             <ServiceBlock
-              title="Eget sit"
-              description="Sit bibendum donec dolor fames neque vulputate non sit aliquam. Consequat turpis natoque leo, massa."
+              title="Ullamcorper arcu"
+              description="Ipsum at id hendrerit amet faucibus commodo quam nullam. Lectus auctor habitant duis dictum."
             />
             <ServiceBlock
-              title="Imperdiet pellentesque"
-              description="Platea arcu dapibus non magna cursus lectus id sollicitudin. Enim viverra parturient tristique nulla."
+              title="Et pellentesque"
+              description="Mi vitae, massa eu molestie massa euismod volutpat condimentum. Blandit molestie ullamcorper hendrerit purus lorem vulputate."
             />
             <ServiceBlock
-              title="Non libero"
-              description="Congue mauris sem vel, urna viverra. Urna, nibh leo suscipit purus ut sed eros, consectetur viverra."
+              title="Amet egestas"
+              description="Elementum, libero, lacus, vel ullamcorper at velit id. Malesuada velit et, ullamcorper malesuada amet, felis."
             />
           </div>
         </motion.div>
@@ -98,7 +98,7 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
     {/* Imagem do Retângulo */}
     <div
       className={`${
-        isMobile ? "w-80" : "absolute top-0 left-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-96"
+        isMobile ? "w-80 ml-24" : "absolute top-0 right-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-96"
       }`}
     >
       <Image
@@ -115,8 +115,8 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
     <div
       className={`${
         isMobile
-          ? "shadow-sm w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96 mx-auto mt-[-600px] sm:mt-[-60px]"
-          : "absolute top-[-60px] sm:top-[-60px] md:top-[40rem] lg:top-[-60px] xl:top-[-60px] 2xl:top-[-60px] shadow-sm left-1/2 sm:left-10 transform -translate-x-1/2 sm:translate-x-0 z-20 sm:z-0 w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96"
+          ? "shadow-sm w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96 mx-auto mt-[-580px] sm:mt-[-60px] mr-0"
+          : "absolute top-[-60px] sm:top-[-60px] md:top-[40rem] lg:top-[-60px] xl:top-[-60px] 2xl:top-[-60px] shadow-sm right-1/2 sm:right-10 transform translate-x-1/2 sm:translate-x-0 z-20 sm:z-0 w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96"
       }`}
     >
       <Image
@@ -132,4 +132,4 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
   </>
 );
 
-export default Services;
+export default PremiumServices;
