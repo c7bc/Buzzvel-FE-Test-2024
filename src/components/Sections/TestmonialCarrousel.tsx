@@ -1,56 +1,51 @@
-// src/components/Sections/TestimonialCarousel.tsx
+// src/components/sections/TestimonialCarousel.tsx
 
 import { useState, useEffect } from "react";
-import Testimonial from "./Testimonial"; // Correção no nome do arquivo
+import Testimonial from "./Testimonial";
 import { motion, AnimatePresence } from "framer-motion";
-import ButtonPurple from "../ui/ButtonPurple";
+import Button from "../ui/Button";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import avatar1 from "../../../public/images/avatar-1.jpeg";
 import avatar2 from "../../../public/images/avatar-2.jpeg";
 import avatar3 from "../../../public/images/avatar-3.jpeg";
 import avatar4 from "../../../public/images/avatar-4.jpeg";
-import { StaticImageData } from 'next/image';
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+
 
 interface TestimonialType {
   quote: string;
   author: string;
   position: string;
-  image: string | StaticImageData;
+  image: string; // Caminho da imagem
 }
 
 const testimonials: TestimonialType[] = [
   {
-    quote: "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.",
+    quote: "Purus maecenas quis elit eu, aliquet...",
     author: "Jane Cooper",
     position: "10KWh",
-    image: avatar1
+    image: avatar1.src
   },
   {
-    quote: "Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
+    quote: "Vehicula sit sit pharetra bibendum ut risus accumsan...",
     author: "Ralph Edwards",
-    position: "32KWh ",
-    image: avatar2
+    position: "32KWh",
+    image: avatar2.src
   },
   {
-    quote: "Viverra lacus suspendisse elit, adipiscing orci, non turpis etiam sapien. Viverra blandit sem neque pretium. Duis enim semper fermentum consequat aenean libero. Blandit porta leo condimentum dolor, nisi, aliquet ante laoreet.",
+    quote: "Viverra lacus suspendisse elit, adipiscing orci...",
     author: "Courtney Henry",
     position: "6KWh",
-    image: avatar3
+    image: avatar3.src
   },
   {
-    quote: "Hendrerit augue ut nec, senectus quis integer netus. Sagittis fusce rhoncus magnis habitant amet amet. Egestas amet habitasse amet risus tellus ornare. Hendrerit augue ut nec, senectus. Mauris egestas feugiat leo vitae praesent neque, et.",
+    quote: "Hendrerit augue ut nec, senectus quis integer netus...",
     author: "Cameron Williamson",
     position: "12KWh",
-    image: avatar4
-  },
-  {
-    quote: "Hendrerit augue ut nec, senectus quis integer netus. Sagittis fusce rhoncus magnis habitant amet amet. Egestas amet habitasse amet risus tellus ornare. Hendrerit augue ut nec, senectus. Mauris egestas feugiat leo vitae praesent neque, et.",
-    author: "Cameron Williamson",
-    position: "12KWh",
-    image: avatar4
+    image: avatar4.src
   },
   // Adicione mais depoimentos conforme necessário
 ];
+
 
 // Hook personalizado para obter o tamanho da janela
 const useWindowSize = () => {
@@ -141,6 +136,7 @@ const TestimonialCarousel: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-20">
         <div className="flex flex-col lg:flex-row items-center lg:items-start">
+          {/* Título e Descrição */}
           <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
             <h2 className="text-sm font-bold text-[#FCD34D] mb-2">
               Join other Sun harvesters
@@ -153,11 +149,13 @@ const TestimonialCarousel: React.FC = () => {
             </p>
           </div>
 
+          {/* Botão */}
           <div className="lg:w-1/2 flex justify-center lg:justify-end space-x-4 mt-4 lg:mt-8">
-            <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" buttonType="button2" />
+            <Button text="Request a Quote" ariaLabel="Request a Quote" buttonType="button2" />
           </div>
         </div> 
 
+        {/* Carrossel de Depoimentos */}
         <div className="mt-12 overflow-hidden relative">
           <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.div
@@ -172,7 +170,6 @@ const TestimonialCarousel: React.FC = () => {
                 x: { type: "tween", stiffness: 300, damping: 20 },
                 opacity: { duration: 0.2 },
               }}
-              
             >
               {currentTestimonials.map(({ testimonial, index }) => (
                 <Testimonial
@@ -180,13 +177,14 @@ const TestimonialCarousel: React.FC = () => {
                   quote={testimonial.quote}
                   author={testimonial.author}
                   position={testimonial.position}
-                  image={typeof testimonial.image === 'string' ? testimonial.image : testimonial.image.src}
+                  image={testimonial.image}
                 />
               ))}
             </motion.div>
           </AnimatePresence>
         </div>
 
+        {/* Botões de Navegação */}
         <div className="flex justify-center md:justify-start space-x-4 mt-8">
           <button
             onClick={prevTestimonial}

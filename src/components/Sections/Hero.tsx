@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import heroImage from "../../../public/images/right.png";
 import testmonial1 from "../../../public/images/testmonial-1.jpeg";
-import ButtonPurple from "../ui/ButtonPurple";
+import Button from "../ui/Button";
 
 const Hero: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
 
         {/* Alinhar o botão à esquerda no 2xl */}
         <div className="flex justify-center md:justify-start 2xl:justify-start">
-          <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
+          <Button text="Request a Quote" ariaLabel="Request a Quote" />
         </div>
 
         {/* Testemunho */}
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
           width={550}
           height={550}
           quality={100}
-          loading="eager"
+          loading="eager"  // Isso desativa o lazy loading
         />
       </motion.div>
     </section>

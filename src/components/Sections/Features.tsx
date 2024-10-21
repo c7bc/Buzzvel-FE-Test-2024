@@ -1,9 +1,11 @@
+// src/components/sections/Features.tsx
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import desktop from "../../../public/images/desktop.png";
 import desktopMobile from "../../../public/images/desktop-mobile.png";
-import purple from "../../../public/images/elipse-purple.png";
-import orange from "../../../public/images/elipse-orange.png";
+import purpleEllipse from "../../../public/images/elipse-purple.png";
+import orangeEllipse from "../../../public/images/elipse-orange.png";
 
 const Features: React.FC = () => {
   return (
@@ -15,8 +17,9 @@ const Features: React.FC = () => {
         <motion.h2
           className="text-sm font-bold text-[#d97706] mb-2"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
           No more waste
         </motion.h2>
@@ -24,8 +27,9 @@ const Features: React.FC = () => {
         <motion.h1
           className="text-4xl sm:text-5xl font-extrabold leading-tight text-[#0F172A]"
           initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
         >
           Pick the Sun
         </motion.h1>
@@ -33,8 +37,9 @@ const Features: React.FC = () => {
         <motion.p
           className="text-sm font-normal leading-relaxed text-[#0F172A] max-w-2xl mt-4 px-2 sm:px-4"
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
         >
           Et pulvinar nec interdum integer id urna molestie porta nullam. A, donec ornare sed turpis pulvinar purus maecenas quam a. Erat porttitor pharetra sed in mauris elementum sollicitudin.
         </motion.p>
@@ -42,15 +47,15 @@ const Features: React.FC = () => {
         <motion.div
           className="relative w-full max-w-4xl h-auto mt-10"
           initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
         >
-          {/* Exibir imagem diferente em dispositivos móveis e tablets */}
           {/* Imagem para dispositivos móveis e tablets */}
           <div className="block md:hidden">
             <Image
               src={desktopMobile}
-              alt="Mobile and Tablet view"
+              alt="Visualização para dispositivos móveis e tablets"
               layout="responsive"
               width={800}
               height={600}
@@ -59,11 +64,11 @@ const Features: React.FC = () => {
             />
           </div>
 
-          {/* Imagem para dispositivos maiores (desktop) */}
+          {/* Imagem para desktop */}
           <div className="hidden md:block">
             <Image
               src={desktop}
-              alt="Desktop showcasing features"
+              alt="Desktop exibindo funcionalidades"
               layout="responsive"
               width={800}
               height={600}
@@ -82,7 +87,7 @@ const BackgroundEllipses: React.FC = () => (
     {/* Orange Ellipse */}
     <div className="absolute top-64 sm:top-72 md:top-64 lg:top-72 xl:top-40 2xl:top-40 left-[-20%] sm:left-[-5%] md:left-[-15%] lg:left-24 xl:left-20 2xl:left-32 transform -translate-x-1/3 -translate-y-1/4 z-0">
       <Image
-        src={orange}
+        src={orangeEllipse}
         alt="Decorative orange ellipse"
         width={370}
         height={500}
@@ -94,7 +99,7 @@ const BackgroundEllipses: React.FC = () => (
     {/* Purple Ellipse */}
     <div className="absolute top-72 sm:top-80 md:top-80 lg:top-80 xl:top-96 2xl:top-96 right-[-40%] sm:right-[-5%] md:right-[-15%] lg:right-32 xl:right-30 2xl:right-36 transform translate-x-1/3 -translate-y-1/4 z-0">
       <Image
-        src={purple}
+        src={purpleEllipse}
         alt="Decorative purple ellipse"
         width={400}
         height={400}

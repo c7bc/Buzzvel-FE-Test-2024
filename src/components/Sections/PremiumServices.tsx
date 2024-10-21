@@ -1,4 +1,4 @@
-// src/components/Sections/Destaques.tsx
+// src/components/sections/PremiumServices.tsx
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -7,8 +7,8 @@ import placeholderMobile from "../../../public/images/mobile-app-placeholder-2.p
 
 const PremiumServices: React.FC = () => {
   return (
-    <section id="destaques" className="relative bg-gray-50 overflow-hidden py-12 mt-6">
-      {/* Background Images para Desktop, oculto em md e lg */}
+    <section id="premium-services" className="relative bg-gray-50 overflow-hidden py-12 mt-6">
+      {/* Background Images para Desktop */}
       <div className="hidden sm:block md:hidden lg:hidden xl:block 2xl:block">
         <BackgroundImages />
       </div>
@@ -28,27 +28,27 @@ const PremiumServices: React.FC = () => {
           text-center 
           z-10 
           relative 
-          h-[740px] sm:h-[650px] md:h-[600px] lg:h-[600px] xl:h-screen 2xl:h-screen 
-          mt-0
+          h-auto
         "
       >
         {/* Conteúdo dos Destaques */}
         <motion.div
-          className="max-w-3xl"
+          className="max-w-3xl w-full"
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
         >
-          <h2 className="text-sm font-bold text-[#d97706] mb-2">System features</h2>
+          <h2 className="text-sm font-bold text-[#d97706] mb-2">System Features</h2>
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-[#0F172A]">
-          Powerful features
+            Powerful Features
           </h1>
           <p className="text-sm font-normal leading-relaxed text-[#0F172A] max-w-6xl mt-4">
-          Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit ornare maecenas lectus sed.
+            Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit ornare maecenas lectus sed.
           </p>
 
           {/* Blocos de Destaques */}
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-8 md:gap-y-32">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-8">
             <ServiceBlock
               title="Erat sit"
               description="Id quis lectus pharetra, ultricies integer montes, amet, gravida consectetur. Nunc convallis fringilla nisl magna sagittis."
@@ -83,10 +83,16 @@ interface ServiceBlockProps {
 }
 
 const ServiceBlock: React.FC<ServiceBlockProps> = ({ title, description }) => (
-  <div className="mt-10 md:mt-0">
+  <motion.div
+    className="mt-10 md:mt-0"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+  >
     <h3 className="text-xl font-semibold text-[#0F172A]">{title}</h3>
     <p className="text-sm text-[#0F172A] mt-4">{description}</p>
-  </div>
+  </motion.div>
 );
 
 interface BackgroundImagesProps {

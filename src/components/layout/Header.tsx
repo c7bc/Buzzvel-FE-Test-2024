@@ -1,7 +1,7 @@
 // Header.tsx
 import Link from "next/link";
 import { MdOutlineHeadphones } from "react-icons/md";
-import ButtonPurple from "../ui/ButtonPurple"; // Importando o botão reutilizável
+import Button from "../ui/Button"; // Importando o botão reutilizável
 
 const Header: React.FC = () => {
   return (
@@ -47,9 +47,9 @@ const Header: React.FC = () => {
             </h2>
           </div>
 
-          {/* ButtonPurple (hidden on screens smaller than md) */}
+          {/* Button (hidden on screens smaller than md) */}
           <div className="hidden md:block">
-            <ButtonPurple text="Request a Quote" ariaLabel="Request a Quote" />
+            <Button text="Request a Quote" ariaLabel="Request a Quote" />
           </div>
         </div>
       </div>
