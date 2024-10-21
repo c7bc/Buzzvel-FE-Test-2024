@@ -67,7 +67,6 @@ const Hero: React.FC = () => {
           layout="responsive"
           width={550}
           height={550}
-          quality={100}
           loading="eager"  // Isso desativa o lazy loading
         />
       </motion.div>
