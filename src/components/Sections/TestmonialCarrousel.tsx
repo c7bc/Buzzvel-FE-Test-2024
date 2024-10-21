@@ -78,7 +78,7 @@ const useWindowSize = () => {
 // Variantes para animação baseada na direção
 const variants = {
   enter: (direction: number) => ({
-    x: direction > 0 ? 300 : -300,
+    x: direction > 0 ? 300 : -300, // Movimento horizontal na entrada
     opacity: 0,
   }),
   center: {
@@ -86,7 +86,7 @@ const variants = {
     opacity: 1,
   },
   exit: (direction: number) => ({
-    x: direction < 0 ? 300 : -300,
+    x: direction < 0 ? 300 : -300, // Movimento horizontal na saída
     opacity: 0,
   }),
 };
@@ -123,10 +123,11 @@ const TestimonialCarousel: React.FC = () => {
     setCurrent((prev) => (prev - itemsPerView + totalItems) % totalItems);
   };
 
-  const getCurrentTestimonials = (): TestimonialType[] => {
-    const currentTestimonials: TestimonialType[] = [];
+  const getCurrentTestimonials = (): { testimonial: TestimonialType; index: number }[] => {
+    const currentTestimonials: { testimonial: TestimonialType; index: number }[] = [];
     for (let i = 0; i < itemsPerView; i++) {
-      currentTestimonials.push(testimonials[(current + i) % totalItems]);
+      const index = (current + i) % totalItems;
+      currentTestimonials.push({ testimonial: testimonials[index], index });
     }
     return currentTestimonials;
   };
@@ -158,31 +159,24 @@ const TestimonialCarousel: React.FC = () => {
         </div> 
 
         <div className="mt-12 overflow-hidden relative">
-          <AnimatePresence initial={false} custom={direction}>
+          <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.div
-              key={current}
-              className={`grid gap-6 ${
-                itemsPerView === 1
-                  ? "grid-cols-1"
-                  : itemsPerView === 2
-                  ? "grid-cols-2"
-                  : itemsPerView === 3
-                  ? "grid-cols-3"
-                  : "grid-cols-4"
-              }`}
+              key={`${current}-${direction}`} // Garante uma key única por transição
+              className={`flex gap-6 flex-nowrap`} // Adiciona flex-nowrap para evitar quebra de linha
               custom={direction}
               variants={variants}
               initial="enter"
               animate="center"
               exit="exit"
               transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
+                x: { type: "tween", stiffness: 300, damping: 20 },
                 opacity: { duration: 0.2 },
               }}
+              
             >
-              {currentTestimonials.map((testimonial, index) => (
+              {currentTestimonials.map(({ testimonial, index }) => (
                 <Testimonial
-                  key={index}
+                  key={index} // Chave única baseada no índice global
                   quote={testimonial.quote}
                   author={testimonial.author}
                   position={testimonial.position}
@@ -196,14 +190,14 @@ const TestimonialCarousel: React.FC = () => {
         <div className="flex justify-center md:justify-start space-x-4 mt-8">
           <button
             onClick={prevTestimonial}
-            className="border border-[#FCD34D] hover:bg-[#FCD34D] text-white hover:text-[#FCD34D] p-3 rounded-full focus:outline-none transition-colors duration-300"
+            className="border border-[#FCD34D] hover:bg-[#FCD34D] text-white hover:text-[#581C87] p-3 rounded-full focus:outline-none transition-colors duration-300"
             aria-label="Anterior"
           >
             <GoArrowLeft />
           </button>
           <button
             onClick={nextTestimonial}
-            className="border border-[#FCD34D] hover:bg-[#FCD34D] text-white hover:text-[#FCD34D] p-3 rounded-full focus:outline-none transition-colors duration-300"
+            className="border border-[#FCD34D] hover:bg-[#FCD34D] text-white hover:text-[#581C87] p-3 rounded-full focus:outline-none transition-colors duration-300"
             aria-label="Próximo"
           >
             <GoArrowRight />

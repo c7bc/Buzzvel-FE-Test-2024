@@ -3,7 +3,6 @@
 import Hero from "@/components/Sections/Hero";
 import Features from "@/components/Sections/Features";
 import TestimonialCarousel from "@/components/Sections/TestmonialCarrousel";
-import SecondarySection from "@/components/Sections/SecondarySection";
 import CallToAction from "@/components/Sections/CallToAction";
 import Services from "@/components/Sections/Services"
 import PremiumServices from "@/components/Sections/PremiumServices";
@@ -16,7 +15,6 @@ const Home: React.FC = () => {
       <Services />
       <PremiumServices />
       <TestimonialCarousel />
-      <SecondarySection />
       <CallToAction />
     </>
   );
