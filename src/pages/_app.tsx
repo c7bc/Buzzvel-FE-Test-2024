@@ -1,9 +1,6 @@
-// src/pages/_app.tsx
-
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Layout from '@/components/layout/Layout';
-import { AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,13 +10,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       keywords: "palavras-chave, para, SEO, Next.js, React",
       ogTitle: "Título da Página",
       ogDescription: "Descrição da página para Open Graph",
-      ogImage: "/images/seo-image.png", // Caminho atualizado
+      ogImage: "/og-image.jpg", // Certifique-se de ter esta imagem na pasta public
       twitterCard: "summary_large_image",
     }}>
-      {/* Adicionamos o AnimatePresence para animações de página */}
-      <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} />
-      </AnimatePresence>
+      <Component {...pageProps} />
     </Layout>
   );
 }

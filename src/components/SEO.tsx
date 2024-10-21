@@ -1,15 +1,13 @@
-// src/components/SEO.tsx
-
-import Head from 'next/head';
+import Head from "next/head";
 
 interface SEOProps {
   title: string;
   description: string;
   keywords: string;
-  ogTitle: string;
-  ogDescription: string;
-  ogImage: string;
-  twitterCard: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -19,28 +17,20 @@ const SEO: React.FC<SEOProps> = ({
   ogTitle,
   ogDescription,
   ogImage,
-  twitterCard,
+  twitterCard = "summary_large_image",
 }) => {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={ogDescription} />
-      <meta property="og:image" content={ogImage} />
-
-      {/* Twitter */}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      {/* Open Graph */}
+      {ogTitle && <meta property="og:title" content={ogTitle} />}
+      {ogDescription && <meta property="og:description" content={ogDescription} />}
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={ogTitle} />
-      <meta name="twitter:description" content={ogDescription} />
-      <meta name="twitter:image" content={ogImage} />
-
-      {/* Canonical URL */}
-      <link rel="canonical" href="https://www.sollar.com.br/" />
     </Head>
   );
 };
