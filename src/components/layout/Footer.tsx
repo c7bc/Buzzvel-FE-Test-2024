@@ -7,7 +7,7 @@ import logo from "../../../public/images/ico.png";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white text-black">
-      <div className="container mx-auto max-w-screen-xl flex flex-col lg:flex-row justify-between items-center py-6 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20">
+      <div className="container mx-auto max-w-screen-xl flex flex-col lg:flex-row justify-between items-center py-6 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-10">
         {/* Logo and Copyright */}
         <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-4 mb-4 lg:mb-0">
           <div className="flex items-center justify-center space-x-4">
