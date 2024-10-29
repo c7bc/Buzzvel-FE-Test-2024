@@ -3,8 +3,38 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../public/images/ico.png";
+import React, { useEffect, useState } from "react";
 
 const Footer: React.FC = () => {
+  const [breakpoint, setBreakpoint] = useState<string>("");
+
+  // Define os breakpoints de acordo com o Tailwind CSS
+  const getBreakpoint = (width: number) => {
+    if (width >= 1280) return "xl";
+    if (width >= 1024) return "lg";
+    if (width >= 768) return "md";
+    if (width >= 640) return "sm";
+    return "xs";
+  };
+
+  useEffect(() => {
+    // Função para atualizar o breakpoint
+    const handleResize = () => {
+      const currentBreakpoint = getBreakpoint(window.innerWidth);
+      setBreakpoint(currentBreakpoint);
+      console.log(`Current breakpoint: ${currentBreakpoint}`);
+    };
+
+    // Define o listener para resize
+    window.addEventListener("resize", handleResize);
+
+    // Chama a função inicialmente para logar o breakpoint ao carregar a página
+    handleResize();
+
+    // Remove o listener ao desmontar o componente
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <footer className="bg-white text-black">
       <div className="container mx-auto max-w-screen-xl flex flex-col lg:flex-row justify-between items-center py-6 px-4 sm:px-6 lg:px-20">
