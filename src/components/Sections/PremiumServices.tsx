@@ -102,7 +102,7 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
     {/* Imagem do Retângulo */}
     <div
       className={`${
-        isMobile ? "w-80 ml-24" : "absolute top-0 right-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-[26rem]"
+        isMobile ? "w-80 ml-24" : "absolute top-0 right-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-[28rem]"
       }`}
     >
       <Image
@@ -119,7 +119,7 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
       className={`${
         isMobile
           ? "shadow-sm w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96 mx-auto mt-[-580px] sm:mt-[-60px] mr-0"
-          : "absolute top-[-60px] sm:top-[-60px] md:top-[40rem] lg:top-[-60px] xl:top-[-60px] 2xl:top-[-60px] shadow-sm right-1/2 sm:right-10 transform translate-x-1/2 sm:translate-x-0 z-20 sm:z-0 w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96"
+          : "absolute top-[-60px] sm:top-[-60px] md:top-[40rem] lg:top-[-60px] xl:top-[-60px] 2xl:top-[-30px] shadow-sm right-1/2 sm:right-10 transform translate-x-1/2 sm:translate-x-0 z-20 sm:z-0 w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96"
       }`}
     >
       <Image
