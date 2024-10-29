@@ -43,7 +43,7 @@ const Services: React.FC = () => {
             Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit ornare maecenas lectus sed.
           </p>
 
-          <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-8">
+          <div className="mt-16 xl:mt-18 2xl:mt-20 grid grid-cols-2 gap-x-6 gap-y-8 xl:gap-y-28 2xl:gap-y-36">
             <ServiceBlock
               title="Et mauris"
               description="Posuere quis sed mauris non curabitur pretium elementum eget. Feugiat sed maecenas eu accumsan tristique."
@@ -97,7 +97,7 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
   <>
     <div
       className={`${
-        isMobile ? "w-80" : "absolute top-0 left-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-96"
+        isMobile ? "w-80" : "absolute top-0 left-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-[28rem]"
       }`}
     >
       <Image
@@ -113,7 +113,7 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
       className={`${
         isMobile
           ? "shadow-sm w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96 mx-auto mt-[-600px] sm:mt-[-60px]"
-          : "absolute top-[-60px] sm:top-[-60px] md:top-[40rem] lg:top-[-60px] xl:top-[-60px] 2xl:top-[-60px] shadow-sm left-1/2 sm:left-10 transform -translate-x-1/2 sm:translate-x-0 z-20 sm:z-0 w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96"
+          : "absolute top-[-60px] sm:top-[-60px] md:top-[40rem] lg:top-[-60px] xl:top-[-60px] 2xl:top-[-30px] shadow-sm left-1/2 sm:left-10 transform -translate-x-1/2 sm:translate-x-0 z-20 sm:z-0 w-72 sm:w-48 md:w-64 lg:w-72 xl:w-96 2xl:w-96"
       }`}
     >
       <Image
