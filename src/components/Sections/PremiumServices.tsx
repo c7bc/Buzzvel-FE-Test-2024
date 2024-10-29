@@ -5,7 +5,7 @@ import placeholderMobile from "../../../public/images/mobile-app-placeholder-2.p
 
 const PremiumServices: React.FC = () => {
   return (
-    <section id="premium-services" className="relative overflow-hidden py-12 mt-6 h-auto sm:h-96 lg:h-[600px] xl:h-[750px]">
+    <section id="premium-services" className="relative overflow-hidden py-12 mt-6 md:mb-12 h-auto sm:h-96 lg:h-[600px] xl:h-[750px]">
       {/* Background Images para Desktop */}
       <div className="hidden sm:block md:hidden lg:hidden xl:block 2xl:block">
         <BackgroundImages />
