@@ -194,7 +194,7 @@ const TestimonialCarousel: React.FC = () => {
         <div className="flex justify-center md:justify-start space-x-4 mt-8">
           <button
             onClick={prevTestimonial}
-            className="border border-[#FCD34D] hover:bg-[#FCD34D] text-white hover:text-[#581C87] p-3 rounded-full focus:outline-none transition-colors duration-300"
+            className="border border-[#FCD34D] hover:bg-[#e6b938] text-[#FCD34D] hover:text-[#FFFFFF] p-3 rounded-full focus:outline-none transition-colors duration-300"
             aria-label="Anterior"
           >
             <GoArrowLeft />
