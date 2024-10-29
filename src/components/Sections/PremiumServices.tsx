@@ -46,7 +46,7 @@ const PremiumServices: React.FC = () => {
           </p>
 
           {/* Blocos de Destaques */}
-          <div className="mt-16 xl:mt-18 2xl:mt-28 grid grid-cols-2 gap-x-6 gap-y-8 xl:gap-y-28 2xl:gap-y-44">
+          <div className="mt-16 xl:mt-18 2xl:mt-20 grid grid-cols-2 gap-x-6 gap-y-8 xl:gap-y-28 2xl:gap-y-36">
             <ServiceBlock
               title="Erat sit"
               description="Id quis lectus pharetra, ultricies integer montes, amet, gravida consectetur. Nunc convallis fringilla nisl magna sagittis."
