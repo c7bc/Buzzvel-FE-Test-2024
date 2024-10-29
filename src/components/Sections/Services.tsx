@@ -97,7 +97,7 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
   <>
     <div
       className={`${
-        isMobile ? "w-80" : "absolute top-0 left-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-[28rem]"
+        isMobile ? "w-80" : "absolute top-0 left-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-[24rem]"
       }`}
     >
       <Image

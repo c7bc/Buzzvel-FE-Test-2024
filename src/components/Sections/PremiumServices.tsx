@@ -102,7 +102,7 @@ const BackgroundImages: React.FC<BackgroundImagesProps> = ({ isMobile }) => (
     {/* Imagem do Retângulo */}
     <div
       className={`${
-        isMobile ? "w-80 ml-24" : "absolute top-0 right-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-[28rem]"
+        isMobile ? "w-80 ml-24" : "absolute top-0 right-0 z-0 w-72 sm:w-60 md:w-80 lg:w-96 xl:w-96 2xl:w-[26rem]"
       }`}
     >
       <Image
