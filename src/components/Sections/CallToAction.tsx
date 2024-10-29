@@ -41,7 +41,7 @@ const CallToAction: React.FC = () => {
             viewport={{ once: true }}
           >
             <Button text="Request a Quote" ariaLabel="Request a Quote" buttonType="button2" />
-            <p className="text-white text-sm mr-8 md:mr-4">
+            <p className="text-white text-sm mr-8 md:mr-4 lg:mr-4 xl:mr-4 2xl:mr-8">
               Egestas fringilla aliquam leo
             </p>
           </motion.div>
