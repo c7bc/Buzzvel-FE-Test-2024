@@ -1,13 +1,13 @@
 // Header.tsx
 import Link from "next/link";
 import { MdOutlineHeadphones } from "react-icons/md";
-import Button from "../ui/Button"; // Importando o botão reutilizável
+import Button from "../ui/Button";
 
 const Header: React.FC = () => {
   return (
     <header className="bg-white w-full absolute top-0 left-0">
       <div className="container mx-auto flex items-center justify-between max-h-28 py-6 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20">
-        {/* Logo and Navigation */}
+        {/* Logo e Navegação */}
         <div className="flex items-center">
           <Link
             href="/"
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
             soller
           </Link>
 
-          {/* Nav is hidden on screens smaller than md */}
+          {/* Nav escondida para telas MD */}
           <nav className="hidden md:flex ml-9 space-x-8">
             {[
               { href: "/", label: "Products" },
@@ -37,9 +37,9 @@ const Header: React.FC = () => {
           </nav>
         </div>
 
-        {/* Contact and Quote Button */}
+        {/* Contato */}
         <div className="flex items-center space-x-8 z-10 sm:flex md:flex lg:flex xl:flex 2xl:flex">
-          {/* Phone and Icon (hidden on screens smaller than lg) */}
+          {/* Telefones */}
           <div className="hidden lg:flex items-center text-[#0369A1]">
             <MdOutlineHeadphones className="text-2xl" />
             <h2 className="ml-3 text-xs leading-6 tracking-wide font-semibold">
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
             </h2>
           </div>
 
-          {/* Button (hidden on screens smaller than md) */}
+          {/* Butão */}
           <div className="hidden md:block">
             <Button text="Request a Quote" ariaLabel="Request a Quote" />
           </div>

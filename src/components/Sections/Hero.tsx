@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.
         </p>
 
-        {/* Alinhar o botão à esquerda no 2xl */}
+        {/* Alinhado o botão à esquerda */}
         <div className="flex justify-center md:justify-start 2xl:justify-start">
           <Button text="Request a Quote" ariaLabel="Request a Quote" />
         </div>

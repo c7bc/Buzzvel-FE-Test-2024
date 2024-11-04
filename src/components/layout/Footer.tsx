@@ -1,5 +1,3 @@
-// src/components/layout/Footer.tsx
-
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../public/images/ico.png";
@@ -8,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-white text-black">
       <div className="container mx-auto flex items-center justify-between max-h-28 py-6 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-20 2xl:px-20">
-        {/* Logo and Copyright */}
+        {/* Logo & Copyright */}
         <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-4 mb-4 lg:mb-0">
           <div className="flex items-center justify-center space-x-4">
             <Image src={logo} alt="Soller Logo" width={50} height={50} quality={75} />
@@ -21,7 +19,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* Navigation Links */}
+        {/* Links Nav */}
         <nav className="flex space-x-4">
           <Link href="/terms" aria-label="Terms" className="text-sm text-[#0F172A] hover:text-[#1d2d52]">
             Terms

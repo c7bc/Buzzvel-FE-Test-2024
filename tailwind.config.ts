@@ -13,8 +13,8 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       screens: {
-        'ipad': '820px', // Para o iPad Air em modo retrato
-        'surface': '912px', // Para o Surface Pro 7 em modo retrato
+        'ipad': '820px',
+        'surface': '912px',
       },
     },
   },

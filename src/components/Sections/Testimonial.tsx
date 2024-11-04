@@ -1,5 +1,3 @@
-// src/components/sections/Testimonial.tsx
-
 import Image from 'next/image';
 import React from 'react';
 
@@ -7,7 +5,7 @@ interface TestimonialProps {
   quote: string;
   author: string;
   position: string;
-  image: string; // URL da imagem ou caminho do Next/Image
+  image: string;
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({ quote, author, position, image }) => (

@@ -1,5 +1,3 @@
-// src/pages/index.tsx
-
 import Hero from "@/components/Sections/Hero";
 import Features from "@/components/Sections/Features";
 import TestimonialCarousel from "@/components/Sections/TestmonialCarrousel";

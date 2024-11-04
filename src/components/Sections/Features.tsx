@@ -1,5 +1,3 @@
-// src/components/sections/Features.tsx
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import desktop from "../../../public/images/desktop.png";

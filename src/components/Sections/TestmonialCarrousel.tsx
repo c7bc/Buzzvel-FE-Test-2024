@@ -1,5 +1,3 @@
-// src/components/sections/TestimonialCarousel.tsx
-
 import { useState, useEffect } from "react";
 import Testimonial from "./Testimonial";
 import { motion, AnimatePresence } from "framer-motion";
@@ -49,11 +47,10 @@ const testimonials: TestimonialType[] = [
     position: "12KWh",
     image: avatar4.src
   },
-  // Adicione mais depoimentos conforme necessário
+ 
 ];
 
 
-// Hook personalizado para obter o tamanho da janela
 const useWindowSize = () => {
   const [size, setSize] = useState<{ width: number; height: number }>({
     width: 0,
@@ -76,10 +73,9 @@ const useWindowSize = () => {
   return size;
 };
 
-// Variantes para animação baseada na direção
 const variants = {
   enter: (direction: number) => ({
-    x: direction > 0 ? 300 : -300, // Movimento horizontal na entrada
+    x: direction > 0 ? 300 : -300,
     opacity: 0,
   }),
   center: {
@@ -87,7 +83,7 @@ const variants = {
     opacity: 1,
   },
   exit: (direction: number) => ({
-    x: direction < 0 ? 300 : -300, // Movimento horizontal na saída
+    x: direction < 0 ? 300 : -300,
     opacity: 0,
   }),
 };
@@ -96,7 +92,7 @@ const TestimonialCarousel: React.FC = () => {
   const size = useWindowSize();
   const [current, setCurrent] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1);
-  const [direction, setDirection] = useState(0); // 1 para próximo, -1 para anterior
+  const [direction, setDirection] = useState(0)
 
   useEffect(() => {
     if (size.width >= 1536) {
@@ -165,8 +161,8 @@ const TestimonialCarousel: React.FC = () => {
         <div className="mt-12 overflow-hidden relative">
           <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.div
-              key={`${current}-${direction}`} // Garante uma key única por transição
-              className={`flex gap-6 flex-nowrap`} // Adiciona flex-nowrap para evitar quebra de linha
+              key={`${current}-${direction}`}
+              className={`flex gap-6 flex-nowrap`}
               custom={direction}
               variants={variants}
               initial="enter"
@@ -179,7 +175,7 @@ const TestimonialCarousel: React.FC = () => {
             >
               {currentTestimonials.map(({ testimonial, index }) => (
                 <Testimonial
-                  key={index} // Chave única baseada no índice global
+                  key={index}
                   quote={testimonial.quote}
                   author={testimonial.author}
                   position={testimonial.position}

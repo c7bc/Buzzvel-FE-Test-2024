@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Esconde a barra de rolagem vertical */
+
 html {
-  overflow-y: scroll; /* Garante que a rolagem ainda funcione */
+  overflow-y: scroll;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden; /* Desativa a rolagem horizontal */
-  overflow-y: hidden; /* Esconde a barra de rolagem */
+  overflow-x: hidden;
+  overflow-y: hidden;
   background-color: white;
 }
 
-/* Para adicionar uma barra de rolagem personalizada, caso precise */
+
 body::-webkit-scrollbar {
-  width: 0; /* Remove a largura da barra de rolagem */
-  background: transparent; /* Torna o fundo da barra invisível */
+  width: 0;
+  background: transparent;
 }
