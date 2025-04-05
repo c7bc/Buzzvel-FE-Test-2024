@@ -167,13 +167,3 @@ Follow these detailed steps to set up and run the Soller project locally:
       Feel free to explore the codebase, make changes, and see them reflected in real-time if you're running the development server.
     - **Contribute:**
       If you find any issues or have suggestions, feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/devnerii/Buzzvel-FE-Test-2024).
-
----
-
-## Contact
-
-- **🔗 [LinkedIn](https://www.linkedin.com/in/daniel-neri-51a7b12b3/):** Connect with me professionally.
-- **🌐 [Personal Website](https://www.danielneri.online/):** Explore more of my work and projects.
-- **✉️ Email:** [dnnxzz70@gmail.com](mailto:dnnxzz70@gmail.com)
-
-If you encounter any issues or have questions, please refer to the project's [documentation](#) or reach out to me directly. Happy coding! 🚀
